@@ -44,7 +44,16 @@ export const approveExportCart = (id: number, exportApproved: boolean) => {
 export const getCart = (accountId: string) => {
     const cart = carts.filter(cart => cart.accountId === accountId);
     console.log(cart);
-    return cart
+
+    // 객체 배열을 객체로 변경
+    const rearrangedCart = {
+        id: cart[0].id,
+        accountId: cart[0].accountId,
+        user: cart[0].user,
+        exportApproved: cart[0].exportApproved
+    };
+
+    return rearrangedCart;
 }
 
 export const test = () => "Hello World!";

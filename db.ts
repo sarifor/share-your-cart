@@ -33,10 +33,10 @@ const carts = [
     }
 ];
 
-export const approveExportCart = (id: number, exportApproved: boolean) => {
+/* export const approveExportCart = (id: number, exportApproved: boolean) => {
     if (id && exportApproved) {
         return true;
     }
-};
+}; */
 // export const getCart = () => "Get B's cart";
 export const test = () => "Hello World!";

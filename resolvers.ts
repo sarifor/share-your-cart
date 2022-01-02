@@ -6,8 +6,10 @@ import {
 
 export const resolvers = {
     Query: {
-        approveExportCart: (_, { id, exportApproved }) => approveExportCart(id, exportApproved),
         getCart: (_, { accountId }) => getCart(accountId),
         hello: () => test(),
     },
+    Mutation: {
+        approveExportCart: (_, { accountId, exportApproved }) => approveExportCart(accountId, exportApproved),
+    }
 };

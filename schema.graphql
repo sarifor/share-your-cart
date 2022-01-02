@@ -6,7 +6,10 @@ type Cart {
 }
 
 type Query {
-    approveExportCart(id: Int!, exportApproved: Boolean!): Boolean!
     getCart(accountId: String!): Cart
     hello: String!
+}
+
+type Mutation {
+    approveExportCart(accountId: String!, exportApproved: Boolean!): Boolean!
 }

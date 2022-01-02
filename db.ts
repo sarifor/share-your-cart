@@ -33,12 +33,29 @@ const carts = [
     }
 ];
 
-export const approveExportCart = (id: number, exportApproved: boolean) => {
-    if (exportApproved === true) {
+export const approveExportCart = (accountId: string, exportApproved: boolean) => {
+    const user = carts.filter(cart => cart.accountId === accountId);
+
+    const rearrangedUser = {
+        id: user[0].id,
+        accountId: user[0].accountId,
+        user: user[0].user,
+        items: user[0].items,
+        exportApproved: user[0].exportApproved
+    };
+
+    // user[0].exportApproved 수정하고, carts에서 해당 유저 삭제하고, 해당 유저 다시 push
+    user[0].exportApproved = exportApproved;
+    const userDeletedDb = carts.filter(cart => cart.accountId !== accountId);
+    userDeletedDb.push(rearrangedUser);
+
+    if (carts !== userDeletedDb) {
+        console.log(carts);
         return true;
     } else {
+        console.log(carts);        
         return false;
-    }
+    };
 };
 
 export const getCart = (accountId: string) => {

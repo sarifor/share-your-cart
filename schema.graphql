@@ -1,11 +1,7 @@
 type Cart {
-    id: Int!,
-    accountId: String!,
-    user: String!,
-    items: {
-        name: String,
-        price: Int
-    },
+    id: Int,
+    accountId: String,
+    user: String,
     exportApproved: Boolean
 }
 

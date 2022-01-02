@@ -1,7 +1,8 @@
-import { test } from "./db";
+import { approveExportCart, test } from "./db";
 
 export const resolvers = {
     Query: {
-        hello: (_, hello: string) => test()
+        approveExportCart: (_, id: number, exportApproved: boolean) => approveExportCart(id, exportApproved),
+        hello: (_, hello: string) => test(),
     },
 };

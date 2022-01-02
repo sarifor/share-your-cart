@@ -1,12 +1,11 @@
 import { 
-    // approveExportCart, 
+    approveExportCart, 
     test 
 } from "./db";
 
 export const resolvers = {
     Query: {
-        // approveExportCart: (_, id: number, exportApproved: boolean) => approveExportCart(id, exportApproved),
-        approveExportCart: (_, id: string) => true,        
+        approveExportCart: (_, id: number, exportApproved: boolean) => approveExportCart(id, exportApproved),
         hello: (_, hello: string) => test(),
     },
 };

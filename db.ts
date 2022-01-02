@@ -33,10 +33,13 @@ const carts = [
     }
 ];
 
-/* export const approveExportCart = (id: number, exportApproved: boolean) => {
-    if (id && exportApproved) {
+export const approveExportCart = (id: number, exportApproved: boolean) => {
+    console.log(id); // 콘솔에는 이와 같이 출력됨:  { id: 1, exportApproved: true }
+    if (exportApproved === true) {
         return true;
+    } else {
+        return false;
     }
-}; */
+};
 // export const getCart = () => "Get B's cart";
 export const test = () => "Hello World!";

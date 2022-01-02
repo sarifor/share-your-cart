@@ -1,4 +1,4 @@
 type Query {
-    approveExportCart(id: String!): String!,
+    approveExportCart(id: String!): boolean,
     hello: String!
 }

@@ -6,7 +6,7 @@ import {
 export const resolvers = {
     Query: {
         // approveExportCart: (_, id: number, exportApproved: boolean) => approveExportCart(id, exportApproved),
-        approveExportCart: (_, id: string) => "test",        
+        approveExportCart: (_, id: string) => true,        
         hello: (_, hello: string) => test(),
     },
 };

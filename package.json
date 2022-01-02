@@ -4,14 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {    
-    "start": "nodemon node server.js"
+    "start": "tsc && nodemon node ./dist/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "graphql-yoga": "^1.18.3"
   },
-  "type": "module",
   "devDependencies": {
     "nodemon": "^2.0.15"
   }

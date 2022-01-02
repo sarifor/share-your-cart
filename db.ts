@@ -41,6 +41,10 @@ export const approveExportCart = (id: number, exportApproved: boolean) => {
     }
 };
 
-// export const getCart = () => "Get B's cart";
+export const getCart = (accountId: string) => {
+    const cart = carts.filter(cart => cart.accountId === accountId);
+    console.log(cart);
+    return cart
+}
 
 export const test = () => "Hello World!";

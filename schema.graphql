@@ -1,4 +1,16 @@
+type Cart {
+    id: Int!,
+    accountId: String!,
+    user: String!,
+    items: {
+        name: String,
+        price: Int
+    },
+    exportApproved: Boolean
+}
+
 type Query {
     approveExportCart(id: Int!, exportApproved: Boolean!): Boolean!
+    getCart(accountId: String!): Cart
     hello: String!
 }

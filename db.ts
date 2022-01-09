@@ -67,6 +67,7 @@ export const getCart = (accountId: string) => {
         id: cart[0].id,
         accountId: cart[0].accountId,
         user: cart[0].user,
+        items: cart[0].items,
         exportApproved: cart[0].exportApproved
     };
 

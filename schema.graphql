@@ -1,7 +1,13 @@
+type Item {
+    name: String,
+    price: Int
+}
+
 type Cart {
     id: Int,
     accountId: String,
     user: String,
+    items: [Item],
     exportApproved: Boolean
 }
 
